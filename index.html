@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newfie O'Rourke</title>
+  <style>
+    :root {
+      --green:  #2d6a2d;
+      --gold:   #c9a227;
+      --cream:  #f5f0e8;
+      --dark:   #1a1a1a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: var(--dark);
+      color: var(--cream);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #0d2e0d 0%, #1b4a1b 60%, #0d2e0d 100%);
+      border-bottom: 4px solid var(--gold);
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+    }
+
+    header .shamrock {
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    header h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    header p.tagline {
+      margin-top: 0.6rem;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: #b8d4b8;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background-color: var(--green);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    nav a {
+      color: var(--cream);
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    nav a:hover {
+      background-color: var(--gold);
+      color: var(--dark);
+    }
+
+    /* ── Main content ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    section { margin-bottom: 3.5rem; }
+
+    h2 {
+      color: var(--gold);
+      font-size: 1.7rem;
+      border-bottom: 2px solid var(--green);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    p { line-height: 1.8; margin-bottom: 1rem; }
+
+    /* ── About ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    .about-card {
+      background: #242424;
+      border: 1px solid #3a3a3a;
+      border-top: 3px solid var(--green);
+      border-radius: 6px;
+      padding: 1.2rem 1.4rem;
+    }
+
+    .about-card h3 {
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* ── Music / setlist ── */
+    .setlist {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .setlist li {
+      background: #242424;
+      border-left: 4px solid var(--gold);
+      padding: 0.55rem 0.9rem;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.95rem;
+    }
+
+    /* ── Shows ── */
+    .shows-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .shows-table th {
+      background: var(--green);
+      color: var(--cream);
+      text-align: left;
+      padding: 0.65rem 1rem;
+    }
+
+    .shows-table td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #333;
+    }
+
+    .shows-table tr:nth-child(even) td { background: #242424; }
+
+    /* ── Contact ── */
+    .contact-list {
+      list-style: none;
+      line-height: 2.2;
+    }
+
+    .contact-list a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .contact-list a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: #0d2e0d;
+      border-top: 3px solid var(--gold);
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.85rem;
+      color: #7a9c7a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="shamrock">☘️</div>
+    <h1>Newfie O'Rourke</h1>
+    <p class="tagline">Where the Rock meets South Boston<br>
+        Newfoundland Irish Traditional Music</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#music">Music</a>
+    <a href="#shows">Shows</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About the Band</h2>
+      <p>
+        Newfie O'Rourke brings together the deep Celtic roots shared by Newfoundland and Ireland,
+        weaving jigs, reels, sea shanties, and heartfelt ballads into an evening of music that
+        feels both ancient and alive. Rooted in the oral tradition of The Rock's outports and the
+        pubs of County Cork, the band honours the music that crossed the Atlantic and took on
+        a life of its own in Newfoundland.
+      </p>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>🎻 The Sound</h3>
+          <p>Fiddle, banjo, bodhrán, tin whistle, accordion, and guitar come together in rollicking
+          sets and slow airs that'll have you on your feet &mdash; or wiping a tear.</p>
+        </div>
+        <div class="about-card">
+          <h3>⚓ The Tradition</h3>
+          <p>Our repertoire spans centuries of Newfoundland Irish tradition: Fishermen's laments, kitchen-party stompers, and songs from the old sod preserved
+          on the island long after they faded in Ireland.</p>
+        </div>
+        <div class="about-card">
+          <h3>🌊 The Story</h3>
+          <p>The Irish arrived on the shores of Newfoundland as early as the 1700s, bringing
+          their music with them. Newfie O'Rourke celebrates that unbroken thread running
+          from Waterford to Witless Bay.</p>
+        </div>
+        <div class="about-card">
+          <h3>🍺 The Spirit</h3>
+          <p>Every show is a session &mdash; audience participation welcome.
+          Whether it's a festival stage, a pub session, or a community hall, Newfie O'Rourke
+          brings the kitchen-party spirit wherever they play.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music -->
+    <section id="music">
+      <h2>What We Play</h2>
+      <p>A taste of our repertoire &mdash; traditional tunes and songs drawn from both sides of the Atlantic:</p>
+      <ul class="setlist">
+        <li>The Irish Rover</li>
+        <li>The Kelligrews Soirée</li>
+        <li>Lukey's Boat</li>
+        <li>The Rattlin' Bog</li>
+        <li>She's Like the Swallow</li>
+        <li>The Rocky Road to Dublin</li>
+        <li>I'se the B'y</li>
+        <li>Whiskey in the Jar</li>
+        <li>The Squid-Jiggin' Ground</li>
+        <li>Black Velvet Band</li>
+        <li>Jack Was Every Inch a Sailor</li>
+        <li>Finnegan's Wake</li>
+        <li>The Newfoundland Reel Set</li>
+        <li>Shores of Fogo Island</li>
+        <li>The Galway Shawl</li>
+        <li>Tickle Cove Pond</li>
+      </ul>
+    </section>
+
+    <!-- Shows -->
+    <section id="shows">
+      <h2>Upcoming Shows</h2>
+      <table class="shows-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Venue</th>
+            <th>Location</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sat, May 17, 2026</td>
+            <td>The Crow's Nest</td>
+            <td>St. John's, NL</td>
+            <td>9:00 PM</td>
+          </tr>
+          <tr>
+            <td>Fri, May 30, 2026</td>
+            <td>Shamrock City Pub</td>
+            <td>Corner Brook, NL</td>
+            <td>8:30 PM</td>
+          </tr>
+          <tr>
+            <td>Sat, Jun 14, 2026</td>
+            <td>Celtic Colours Stage</td>
+            <td>Cape Breton, NS</td>
+            <td>7:00 PM</td>
+          </tr>
+          <tr>
+            <td>Sun, Jul 6, 2026</td>
+            <td>George Street Festival</td>
+            <td>St. John's, NL</td>
+            <td>6:00 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p>For bookings, press inquiries, or just to say b'y, reach out through any of the channels below:</p>
+      <ul class="contact-list">
+        <li>📧 Email: <a href="mailto:info@newfieorourke.com">info@newfieorourke.com</a></li>
+        <li>📘 Facebook: <a href="https://facebook.com/newfieorourke" target="_blank" rel="noopener">facebook.com/newfieorourke</a></li>
+        <li>🎵 Instagram: <a href="https://instagram.com/newfieorourke" target="_blank" rel="noopener">@newfieorourke</a></li>
+        <li>🎶 Spotify: <a href="https://open.spotify.com" target="_blank" rel="noopener">Search "Newfie O'Rourke"</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>☘️ &copy; 2026 Newfie O'Rourke &mdash; All rights reserved</p>
+  </footer>
+
+</body>
+</html>
